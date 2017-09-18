@@ -1,0 +1,31 @@
+{
+  "name": "bank-gov-ua-currency-convert",
+  "version": "1.0.0",
+  "description": "Convert currencies using bank.gov.ua api",
+  "main": "index.js",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "memoizee": "^0.4.11",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boo1ean/bank-gov-ua-currency-convert.git"
+  },
+  "keywords": [
+    "currency",
+    "convert",
+    "bank.gov.ua",
+    "money"
+  ],
+  "author": "Egor Gumenyuk <boo1ean0807@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/boo1ean/bank-gov-ua-currency-convert/issues"
+  },
+  "homepage": "https://github.com/boo1ean/bank-gov-ua-currency-convert#readme"
+}
