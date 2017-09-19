@@ -1,6 +1,6 @@
 {
   "name": "bank-gov-ua-currency-convert",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert currencies using bank.gov.ua api",
   "main": "index.js",
   "dependencies": {
