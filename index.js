@@ -22,7 +22,7 @@ function fetchCurrencies () {
 const memoizedFetchCurrencies = memoizee(fetchCurrencies, { promise: true, maxAge: EXCHANGE_RATES_CACHE_TIMEOUT  })
 
 function convert (amount, fromCurrency, toCurrency) {
-	return memoizedFetchCurrencies().then(rates => {
+	return Promise.resolve(memoizedFetchCurrencies()).then(rates => {
 		if (fromCurrency !== BASE_CURRENCY) {
 			amount = amount * rates[fromCurrency].rate
 		}
