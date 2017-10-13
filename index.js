@@ -1,6 +1,7 @@
 const Promise = require('bluebird')
 const request = Promise.promisify(require('request'))
 const memoizee = require('memoizee')
+const debug = require('debug')('bank-gov-ua-currency-convert')
 
 const URL = 'https://bank.gov.ua/NBUStatService/v1/statdirectory/exchange?json'
 const BASE_CURRENCY = 'UAH'
@@ -22,7 +23,9 @@ function fetchCurrencies () {
 const memoizedFetchCurrencies = memoizee(fetchCurrencies, { promise: true, maxAge: EXCHANGE_RATES_CACHE_TIMEOUT  })
 
 function convert (amount, fromCurrency, toCurrency) {
+	debug('params', amount, fromCurrency, toCurrency)
 	return memoizedFetchCurrencies().then(rates => {
+		debug('rates', rates)
 		if (fromCurrency !== BASE_CURRENCY) {
 			amount = amount * rates[fromCurrency].rate
 		}

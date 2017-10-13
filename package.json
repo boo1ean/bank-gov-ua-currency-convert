@@ -1,10 +1,11 @@
 {
   "name": "bank-gov-ua-currency-convert",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Convert currencies using bank.gov.ua api",
   "main": "index.js",
   "dependencies": {
     "bluebird": "^3.5.0",
+    "debug": "^3.1.0",
     "memoizee": "^0.4.11",
     "request": "^2.81.0"
   },
